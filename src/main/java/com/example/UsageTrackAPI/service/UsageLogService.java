@@ -78,7 +78,7 @@ public class UsageLogService {
         return savedLog;
     }
 
-    private boolean validateLicense(String licenseCode, String binNumber) {
+    public boolean validateLicense(String licenseCode, String binNumber) {
         try {
 
             HttpHeaders headers = new HttpHeaders();
@@ -124,7 +124,7 @@ public class UsageLogService {
 
 
 
-    private void deactivateLicenseAfterOneTimeUse(String licenseCode) {
+    public void deactivateLicenseAfterOneTimeUse(String licenseCode) {
         try {
 
             HttpHeaders headers = new HttpHeaders();
@@ -166,11 +166,11 @@ public class UsageLogService {
         }
     }
 
-    private boolean isValidBinNumber(String binNumber) {
+    public boolean isValidBinNumber(String binNumber) {
         return binNumber.matches("^\\d{13}$");
     }
 
-    private boolean isValidLicenseCode(String licenseCode) {
+    public boolean isValidLicenseCode(String licenseCode) {
         return licenseCode.matches("\\d{4}");
     }
 
