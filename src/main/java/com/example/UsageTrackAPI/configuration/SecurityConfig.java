@@ -13,6 +13,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 import org.springframework.security.web.SecurityFilterChain;
+import org.springframework.web.client.RestTemplate;
 import org.springframework.web.reactive.function.client.WebClient;
 
 @Configuration
@@ -60,8 +61,13 @@ public class SecurityConfig {
         return new BCryptPasswordEncoder();
     }
 
+//    @Bean
+//    public WebClient.Builder webClientBuilder() {
+//        return WebClient.builder();
+//    }
+
     @Bean
-    public WebClient.Builder webClientBuilder() {
-        return WebClient.builder();
+    public RestTemplate restTemplate() {
+        return new RestTemplate();
     }
 }
