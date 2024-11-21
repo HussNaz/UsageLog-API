@@ -36,9 +36,9 @@ out/
 ### VS Code ###
 .vscode/
 
-.gitattributes
-.gitignore
-gradlew.bat
-gradew
-settings.gradle
-gradle/wrapper
+/src/.gitattributes
+/src/.gitignore
+/src/gradlew.bat
+/src/gradew
+/src/settings.gradle
+/src/gradle/wrapper
