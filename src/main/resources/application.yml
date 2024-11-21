@@ -1,0 +1,22 @@
+Server:
+  port: 8083
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3307/usage_track?createDatabaseIfNotExist=true&useSSL=false&allowPublicKeyRetrieval=true
+
+    username: root
+    password: 1234
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  security:
+    user:
+      name: admin
+      password: admin123
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+
+    show-sql: true
